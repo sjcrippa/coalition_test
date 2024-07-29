@@ -2,7 +2,7 @@ import * as React from "react";
 const PatientSvg = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={23.733}
+    width={21}
     height={17}
     viewBox="0 0 23.733 17"
     {...props}
