@@ -8,10 +8,10 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { useHandleResize } from "@/hooks/useHandleResize";
-import LogoSvg from "../Svgs/logo";
+import LogoSvg from "../../svgs/logo";
 import menuItems from "./nav-items";
 import NavUser from "./nav-user";
-import MenuSvg from "../Svgs/menu";
+import MenuSvg from "../../svgs/menu";
 
 export default function Navbar() {
   const { isMobile } = useHandleResize()

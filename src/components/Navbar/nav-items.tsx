@@ -1,10 +1,10 @@
 import type { ReactElement } from "react";
 
-import HomeSvg from "../Svgs/home";
-import PatientSvg from "../Svgs/patient";
-import ScheduledSvg from "../Svgs/scheduled";
-import MessageSvg from "../Svgs/message";
-import TransactionsSvg from "../Svgs/transactions";
+import HomeSvg from "../../svgs/home";
+import PatientSvg from "../../svgs/patient";
+import ScheduledSvg from "../../svgs/scheduled";
+import MessageSvg from "../../svgs/message";
+import TransactionsSvg from "../../svgs/transactions";
 
 interface MenuItem {
   label: string;

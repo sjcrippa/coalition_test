@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import SettingsSvg from "../Svgs/settings";
-import MoreSvg from "../Svgs/more";
+import SettingsSvg from "../../svgs/settings";
+import MoreSvg from "../../svgs/more";
 
 export default function NavUser() {
   return (
