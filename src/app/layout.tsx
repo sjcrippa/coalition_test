@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 import Navbar from "@/components/Navbar/navbar";
+import { PatientsProvider } from "@/context/PatientsContext";
 
 import "./globals.css";
 
@@ -19,10 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-light`}>
-        <Navbar />
-        {children}
-      </body>
+      <PatientsProvider>
+        <body className={`${inter.className} bg-light`}>
+          <Navbar />
+          {children}
+        </body>
+      </PatientsProvider>
     </html>
   );
 }
