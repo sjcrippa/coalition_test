@@ -13,15 +13,15 @@ export default function SearchPatients() {
 
   return (
     <section className="w-[367px] bg-white mx-[18px] mt-8 rounded-2xl shadow">
+      <div className="flex items-center w-full justify-between px-5 mb-10">
+        <h1 className="mt-5 text-2xl font-extrabold">Patients</h1>
+        <button className="hover:rotate-90 transition-all">
+          <SearchSvg />
+        </button>
+      </div>
+      {error && <div className="text-red-500">Error: {error}</div>}
+      {loading && <LoadingSpinner />}
       <ScrollArea className="h-screen">
-        <div className="flex items-center w-full justify-between px-5 mb-10">
-          <h1 className="mt-5 text-2xl font-extrabold">Patients</h1>
-          <button className="hover:rotate-90 transition-all">
-            <SearchSvg />
-          </button>
-        </div>
-        {error && <div className="text-red-500">Error: {error}</div>}
-        {loading && <LoadingSpinner />}
         {patients.length > 0 && (
           <div className="w-full">
             {patients.map((patient, index) => (
