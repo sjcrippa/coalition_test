@@ -9,7 +9,7 @@ import { ScrollArea } from "../ui/scroll-area";
 import { LoadingSpinner } from "../Loading/loading";
 
 export default function SearchPatients() {
-  const { patients, loading, error } = usePatients();
+  const { patients, loading, error, handleSelectPatient, selectedPatientIndex } = usePatients();
 
   return (
     <section className="w-[367px] bg-white mx-[18px] mt-8 rounded-2xl shadow">
@@ -23,9 +23,13 @@ export default function SearchPatients() {
         {error && <div className="text-red-500">Error: {error}</div>}
         {loading && <LoadingSpinner />}
         {patients.length > 0 && (
-          <div className="w-full px-5">
+          <div className="w-full">
             {patients.map((patient, index) => (
-              <div key={index} className="flex items-center mb-8">
+              <div
+                key={index}
+                onClick={() => handleSelectPatient(index)}
+                className={`flex items-center px-5 mb-8 cursor-pointer ${selectedPatientIndex === index ? 'bg-active2 w-full h-20' : ''}`}
+              >
                 <Image src={patient.profile_picture} alt="image" width={48} height={48} />
                 <div className="w-full flex justify-between items-center">
                   <div className="ml-3 py-[3px] flex flex-col">

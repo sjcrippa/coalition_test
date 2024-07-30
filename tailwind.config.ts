@@ -23,6 +23,7 @@ const config = {
         light2: "#707070",
         dark: "#072635",
         active: "#01F0D0",
+        active2: "#D8FCF7",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -8,6 +8,9 @@ export default function usePatients() {
   const [patients, setPatients] = useState<Patient[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [selectedPatientIndex, setSelectedPatientIndex] = useState<
+    number | null
+  >(null);
 
   useEffect(() => {
     const auth = btoa(`${username}:${password}`);
@@ -40,9 +43,25 @@ export default function usePatients() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    // Buscar a Jessica Taylor en la lista de pacientes y establecerla como seleccionada por defecto
+    const jessicaIndex = patients.findIndex(
+      (patient) => patient.name === "Jessica Taylor"
+    );
+    if (jessicaIndex !== -1) {
+      setSelectedPatientIndex(jessicaIndex);
+    }
+  }, [patients]);
+
+  const handleSelectPatient = (index: number) => {
+    setSelectedPatientIndex(index);
+  };
+
   return {
     patients,
     error,
     loading,
+    selectedPatientIndex,
+    handleSelectPatient,
   };
 }
