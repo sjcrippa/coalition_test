@@ -1,7 +1,9 @@
-'use client'
+'use client';
 
 import { Line } from "react-chartjs-2";
 
+import Systolic from "./systolic";
+import Diastolic from "./diastolic";
 import useChart from "@/hooks/useChart";
 import { LoadingSpinner } from "@/components/Loading/loading";
 
@@ -14,7 +16,7 @@ export default function History() {
       <div className="h-[298px] mx-5 mt-10 pl-4 rounded-xl bg-[#F4F0FE]">
         <h3 className="pt-4 text-lg font-bold text-dark">Blood Pressure</h3>
         <div className="grid grid-cols-3">
-          <div className="chart-col border col-span-2">
+          <div className="col-span-2">
             {
               !data || !options ? (
                 <LoadingSpinner />
@@ -23,8 +25,10 @@ export default function History() {
               )
             }
           </div>
-          <div className="right-col border col-span-1">
-
+          <div className="-translate-y-6 col-span-1 mr-4">
+            <Systolic />
+            <div className="w-full h-[1px] my-4 bg-[#CBC8D4] "></div>
+            <Diastolic />
           </div>
         </div>
       </div>
