@@ -8,6 +8,7 @@ export default function Systolic() {
 
   // getting the most recent value of blood_pressure
   const latestDiagnosis = selectedPatient?.diagnosis_history[selectedPatient?.diagnosis_history.length - 1];
+
   return (
     <section className="h-[84px]">
       <div className="flex flex-col">

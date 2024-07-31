@@ -6,6 +6,7 @@ import Systolic from "./systolic";
 import Diastolic from "./diastolic";
 import useChart from "@/hooks/useChart";
 import { LoadingSpinner } from "@/components/Loading/loading";
+import Cards from "./cards";
 
 export default function History() {
   const { data, options } = useChart();
@@ -31,6 +32,10 @@ export default function History() {
             <Diastolic />
           </div>
         </div>
+      </div>
+
+      <div className="w-full mt-5 pl-5 ">
+        <Cards />
       </div>
     </section>
   )
