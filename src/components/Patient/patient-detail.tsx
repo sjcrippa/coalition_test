@@ -7,25 +7,31 @@ import FemaleSvg from "@/svgs/female";
 import InsurenceSvg from "@/svgs/insurence";
 import { usePatientsContext } from "@/context/PatientsContext";
 import ShowAllBtn from "./show-all-btn";
+import { LoadingSpinner } from "../Loading/loading";
 
 export default function PatientDetail() {
-  const { selectedPatient } = usePatientsContext();
+  const { selectedPatient, loading } = usePatientsContext();
 
-  const profilePictureSrc = selectedPatient?.profile_picture || "/public/defaultImage.png"; // --> This is needed because Next.js Image requires the src property to be of type string or StaticImport.
+  const profilePictureSrc = selectedPatient?.profile_picture || "/defaultImage.png"; // --> This is needed because Next.js Image requires the src property to be of type string or StaticImport.
 
   return (
     <section className="mt-8 mx-8 w-[367px] h-fit bg-white rounded-2xl shadow">
       <div className="mt-8 mb-8 w-full items-center flex flex-col justify-center">
-        <Image
-          src={profilePictureSrc}
-          alt="Profile picture"
-          width={200}
-          height={200}
-          quality={100}
-          priority={true}
-        />
-        <h4 className="mt-6 text-2xl font-extrabold text-dark">{selectedPatient?.name}</h4>
-        <div className="ml-5 mt-8 flex flex-col w-fit">
+
+        {loading ? <LoadingSpinner /> : (
+          <>
+            <Image
+              src={profilePictureSrc}
+              alt="Profile picture"
+              width={200}
+              height={200}
+              quality={100}
+              priority={true}
+            />
+            <h4 className="mt-6 text-2xl font-extrabold text-dark">{selectedPatient?.name}</h4>
+          </>
+        )}
+        <div className="ml-5 w-fit lg:w-full mt-8 flex flex-col">
           <div className="flex gap-x-4 mb-8 ">
             <div className="flex justify-center items-center w-[42px] h-[42px] bg-light rounded-full">
               <Calendar />
