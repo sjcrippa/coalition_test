@@ -1,5 +1,8 @@
 import * as React from "react";
-const MenuSvg = (props) => (
+
+interface MenuSvgProps extends React.SVGProps<SVGSVGElement> { }
+
+const MenuSvg: React.FC<MenuSvgProps> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={24}
@@ -8,7 +11,7 @@ const MenuSvg = (props) => (
     style={{
       fill: "rgba(0, 0, 0, 1)",
       transform: "",
-      msfilter: "",
+      msFilter: "",
     }}
     {...props}
   >

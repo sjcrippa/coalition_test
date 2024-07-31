@@ -1,5 +1,8 @@
 import * as React from "react";
-const SettingsSvg = (props) => (
+
+interface SettingsSvgProps extends React.SVGProps<SVGSVGElement> { }
+
+const SettingsSvg: React.FC<SettingsSvgProps> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={18.944}

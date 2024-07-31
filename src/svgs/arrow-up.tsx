@@ -1,5 +1,8 @@
 import * as React from "react";
-const ArrowUp = (props) => (
+
+interface ArrowUpProps extends React.SVGProps<SVGSVGElement> { }
+
+const ArrowUp: React.FC<ArrowUpProps> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={10}

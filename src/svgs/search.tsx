@@ -1,5 +1,8 @@
 import * as React from "react";
-const SearchSvg = (props) => (
+
+interface SearchSvgProps extends React.SVGProps<SVGSVGElement> { }
+
+const SearchSvg: React.FC<SearchSvgProps> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={17.995}

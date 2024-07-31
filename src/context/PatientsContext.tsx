@@ -48,7 +48,11 @@ export const PatientsProvider = ({ children }: { children: ReactNode }) => {
         setPatients(data);
         setLoading(false);
       } catch (error) {
-        setError(error.message);
+        if (error instanceof Error) {
+          setError(error.message);
+        } else {
+          setError("An unknown error occurred");
+        }
         console.error("There was a problem with the fetch operation:", error);
       }
     };

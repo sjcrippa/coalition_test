@@ -1,5 +1,8 @@
 import * as React from "react";
-const ArrowDown = (props) => (
+
+interface ArrowDownProps extends React.SVGProps<SVGSVGElement> { }
+
+const ArrowDown: React.FC<ArrowDownProps> = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width={9.999}
