@@ -1,5 +1,6 @@
 import History from "@/components/Diagnosis/History/history";
 import DiagnosisList from "@/components/Diagnosis/List/diagnosis-list";
+import LabResults from "@/components/LabResults/lab-results";
 import PatientDetail from "@/components/Patient/patient-detail";
 import SearchPatients from "@/components/Search/search-patients";
 
@@ -11,7 +12,10 @@ export default function Home() {
         <History />
         <DiagnosisList />
       </div>
-      <PatientDetail />
+      <div className="flex flex-col">
+        <PatientDetail />
+        <LabResults />
+      </div>
     </main>
   );
 };

@@ -1,8 +1,9 @@
 'use client';
 
+import Image from "next/image";
 import { MoreHorizontal, Search } from "lucide-react";
 
-import Image from "next/image";
+import { alert } from "@/lib/alert";
 import { ScrollArea } from "../ui/scroll-area";
 import { LoadingSpinner } from "../Loading/loading";
 import { usePatientsContext } from "@/context/PatientsContext";
@@ -14,7 +15,10 @@ export default function SearchPatients() {
     <section className="w-[367px] h-[1054px] ml-[18px] mr-8 bg-white  mt-8 rounded-2xl shadow overflow-hidden">
       <div className="flex items-center w-full justify-between px-5 mb-10">
         <h1 className="mt-5 text-2xl font-extrabold text-dark">Patients</h1>
-        <button className="hover:rotate-90 transition-all">
+        <button
+          onClick={alert}
+          className="hover:rotate-90 transition-all"
+        >
           <Search />
         </button>
       </div>

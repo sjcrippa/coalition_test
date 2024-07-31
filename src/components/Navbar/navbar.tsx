@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Menu } from "lucide-react";
 
+import { alert } from "@/lib/alert";
 import {
   Sheet,
   SheetContent,
@@ -53,14 +54,17 @@ export default function Navbar() {
             <>
               <ul className="h-[41px] mx-auto flex gap-x-10 justify-center items-center">
                 {menuItems.map((item, index) => (
-                  <div key={index} className={item.isActive ? 'bg-active rounded-[41px] px-4 py-[11px]' : ''}>
+                  <button
+                    key={index}
+                    onClick={alert}
+                    className={item.isActive ? 'bg-active rounded-[41px] px-4 py-[11px]' : ''}>
                     <li className="flex items-center gap-x-2 text-dark text-sm font-bold cursor-pointer">
                       <span>{item.icon}</span>
                       <p>
                         {item.label}
                       </p>
                     </li>
-                  </div>
+                  </button>
                 ))}
               </ul>
               <NavUser />
