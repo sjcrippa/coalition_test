@@ -1,5 +1,5 @@
 import History from "@/components/Diagnosis/History/history";
-import PatientDetail from "@/components/Patient/patient-detaill";
+import PatientDetail from "@/components/Patient/patient-detail";
 import SearchPatients from "@/components/Search/search-patients";
 
 export default function Home() {
@@ -9,5 +9,5 @@ export default function Home() {
       <History />
       <PatientDetail />
     </main>
-  )
-}
+  );
+};
