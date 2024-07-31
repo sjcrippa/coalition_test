@@ -27,7 +27,7 @@ export default function PatientDetail() {
         <h4 className="mt-6 text-2xl font-extrabold text-dark">{selectedPatient?.name}</h4>
         <div className="ml-5 mt-8 flex flex-col w-fit">
           <div className="flex gap-x-4 mb-8 ">
-            <div className="flex justify-center items-center w-[42px] h-[42px] bg-[#F6F7F8] rounded-full">
+            <div className="flex justify-center items-center w-[42px] h-[42px] bg-light rounded-full">
               <Calendar />
             </div>
             <div className="flex flex-col text-sm text-dark">
@@ -37,7 +37,7 @@ export default function PatientDetail() {
           </div>
 
           <div className="flex gap-x-4 mb-8">
-            <div className="flex justify-center items-center w-[42px] h-[42px] bg-[#F6F7F8] rounded-full">
+            <div className="flex justify-center items-center w-[42px] h-[42px] bg-light rounded-full">
               <FemaleSvg />
             </div>
             <div className="flex flex-col text-sm text-dark">
@@ -47,7 +47,7 @@ export default function PatientDetail() {
           </div>
 
           <div className="flex gap-x-4 mb-8">
-            <div className="flex justify-center items-center w-[42px] h-[42px] bg-[#F6F7F8] rounded-full">
+            <div className="flex justify-center items-center w-[42px] h-[42px] bg-light rounded-full">
               <PhoneIcon />
             </div>
             <div className="flex flex-col text-sm text-dark">
@@ -57,7 +57,7 @@ export default function PatientDetail() {
           </div>
 
           <div className="flex gap-x-4 mb-8">
-            <div className="flex justify-center items-center w-[42px] h-[42px] bg-[#F6F7F8] rounded-full">
+            <div className="flex justify-center items-center w-[42px] h-[42px] bg-light rounded-full">
               <PhoneIcon />
             </div>
             <div className="flex flex-col text-sm text-dark">
@@ -67,7 +67,7 @@ export default function PatientDetail() {
           </div>
 
           <div className="flex gap-x-4">
-            <div className="flex justify-center items-center w-[42px] h-[42px] bg-[#F6F7F8] rounded-full">
+            <div className="flex justify-center items-center w-[42px] h-[42px] bg-light rounded-full">
               <InsurenceSvg />
             </div>
             <div className="flex flex-col text-sm text-dark">
