@@ -2,9 +2,7 @@ import ArrowUp from "@/svgs/arrow-up";
 import { usePatientsContext } from "@/context/PatientsContext";
 
 export default function Systolic() {
-  const { patients, selectedPatientIndex } = usePatientsContext();
-
-  const selectedPatient = selectedPatientIndex !== null ? patients[selectedPatientIndex] : null;
+  const { selectedPatient } = usePatientsContext();
 
   // getting the most recent value of blood_pressure
   const latestDiagnosis = selectedPatient?.diagnosis_history[selectedPatient?.diagnosis_history.length - 1];

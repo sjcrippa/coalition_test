@@ -5,9 +5,7 @@ import { usePatientsContext } from "@/context/PatientsContext";
 import { LoadingSpinner } from "@/components/Loading/loading";
 
 export default function Cards() {
-  const { patients, selectedPatientIndex } = usePatientsContext();
-
-  const selectedPatient = selectedPatientIndex !== null ? patients[selectedPatientIndex] : null;
+  const { selectedPatient } = usePatientsContext();
 
   const latestDiagnosis = selectedPatient?.diagnosis_history[selectedPatient?.diagnosis_history.length - 1];
 

@@ -28,7 +28,7 @@ export default function SearchPatients() {
               <div
                 key={index}
                 onClick={() => handleSelectPatient(index)}
-                className={`flex items-center px-5 mb-8 cursor-pointer ${selectedPatientIndex === index ? 'bg-active2 w-full h-20' : ''}`}
+                className={`flex items-center px-5 mb-8 cursor-pointer ${selectedPatientIndex === index ? 'bg-active2 w-full h-20 transition-all' : ''}`}
               >
                 <Image src={patient.profile_picture} alt="image" width={48} height={48} />
                 <div className="w-full flex justify-between items-center">

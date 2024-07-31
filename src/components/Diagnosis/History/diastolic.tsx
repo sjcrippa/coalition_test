@@ -2,9 +2,7 @@ import { usePatientsContext } from "@/context/PatientsContext";
 import ArrowDown from "@/svgs/arrow-down";
 
 export default function Diastolic() {
-  const { patients, selectedPatientIndex } = usePatientsContext();
-
-  const selectedPatient = selectedPatientIndex !== null ? patients[selectedPatientIndex] : null;
+  const { selectedPatient } = usePatientsContext();
 
   // getting the most recent value of blood_pressure (acording to ui provided)
   const latestDiagnosis = selectedPatient?.diagnosis_history[selectedPatient?.diagnosis_history.length - 1];

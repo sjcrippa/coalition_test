@@ -25,12 +25,10 @@ ChartJS.register(
 );
 
 export default function useChart() {
-  const { patients, selectedPatientIndex } = usePatientsContext();
+  const { patients, selectedPatient, selectedPatientIndex } =
+    usePatientsContext();
 
   const chartData = useMemo(() => {
-    const selectedPatient =
-      selectedPatientIndex !== null ? patients[selectedPatientIndex] : null;
-
     if (!selectedPatient) {
       return { data: null, options: null };
     }

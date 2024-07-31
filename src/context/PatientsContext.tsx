@@ -13,6 +13,7 @@ interface PatientsContextType {
   patients: Patient[];
   loading: boolean;
   error: string | null;
+  selectedPatient: Patient | null;
   selectedPatientIndex: number | null;
   handleSelectPatient: (index: number) => void;
 }
@@ -71,9 +72,11 @@ export const PatientsProvider = ({ children }: { children: ReactNode }) => {
     setSelectedPatientIndex(index);
   };
 
+  const selectedPatient = selectedPatientIndex !== null ? patients[selectedPatientIndex] : null;
+
   return (
     <PatientsContext.Provider
-      value={{ patients, loading, error, selectedPatientIndex, handleSelectPatient }}
+      value={{ patients, loading, error, selectedPatient, selectedPatientIndex, handleSelectPatient }}
     >
       {children}
     </PatientsContext.Provider>
