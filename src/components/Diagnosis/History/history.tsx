@@ -34,7 +34,7 @@ export default function History() {
         </div>
       </div>
 
-      <div className="w-full mt-5 pl-5 ">
+      <div className="w-full mt-5 px-5">
         <Cards />
       </div>
     </section>

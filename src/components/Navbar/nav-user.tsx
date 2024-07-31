@@ -1,7 +1,5 @@
 import Image from "next/image";
-
-import SettingsSvg from "../../svgs/settings";
-import MoreSvg from "../../svgs/more";
+import { MoreVertical, SettingsIcon } from "lucide-react";
 
 export default function NavUser() {
   return (
@@ -12,12 +10,12 @@ export default function NavUser() {
         <p className="text-light2">General Practitioner</p>
       </div>
       <div className="w-[1px] h-full bg-[#EDEDED]"></div>
-      <div className="ml-3 flex gap-x-3 justify-end items-center">
+      <div className="ml-3 flex  justify-end items-center">
         <button className="hover:rotate-90 transition-all duration-300">
-          <SettingsSvg />
+          <SettingsIcon />
         </button>
         <button className="hover:scale-110 transition-all">
-          <MoreSvg />
+          <MoreVertical />
         </button>
       </div>
     </section>

@@ -1,9 +1,8 @@
 'use client';
 
-import { MoreHorizontal } from "lucide-react";
+import { MoreHorizontal, Search } from "lucide-react";
 
 import Image from "next/image";
-import SearchSvg from "@/svgs/search";
 import { ScrollArea } from "../ui/scroll-area";
 import { LoadingSpinner } from "../Loading/loading";
 import { usePatientsContext } from "@/context/PatientsContext";
@@ -12,11 +11,11 @@ export default function SearchPatients() {
   const { patients, loading, error, handleSelectPatient, selectedPatientIndex } = usePatientsContext();
 
   return (
-    <section className="w-[367px] h-[1054px] bg-white mx-[18px] mt-8 rounded-2xl shadow overflow-hidden">
+    <section className="w-[367px] h-[1054px] ml-[18px] mr-8 bg-white  mt-8 rounded-2xl shadow overflow-hidden">
       <div className="flex items-center w-full justify-between px-5 mb-10">
         <h1 className="mt-5 text-2xl font-extrabold text-dark">Patients</h1>
         <button className="hover:rotate-90 transition-all">
-          <SearchSvg />
+          <Search />
         </button>
       </div>
       {error && <div className="text-red-500">Error: {error}</div>}

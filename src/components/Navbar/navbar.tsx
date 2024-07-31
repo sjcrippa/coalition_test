@@ -1,17 +1,17 @@
 'use client';
 
 import Link from "next/link";
+import { Menu } from "lucide-react";
 
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { useHandleResize } from "@/hooks/useHandleResize";
+import NavUser from "./nav-user";
 import LogoSvg from "../../svgs/logo";
 import menuItems from "./nav-items";
-import NavUser from "./nav-user";
-import MenuSvg from "../../svgs/menu";
+import { useHandleResize } from "@/hooks/useHandleResize";
 
 export default function Navbar() {
   const { isMobile } = useHandleResize()
@@ -27,7 +27,7 @@ export default function Navbar() {
           <Sheet>
             <div className="w-full flex items-center">
               <SheetTrigger className="w-full flex justify-end items-center">
-                <MenuSvg />
+                <Menu />
               </SheetTrigger>
             </div>
             <SheetContent>
