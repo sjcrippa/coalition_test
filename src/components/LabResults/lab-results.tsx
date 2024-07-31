@@ -17,9 +17,9 @@ export default function LabResults() {
           {selectedPatient?.lab_results.map((item, index) => (
             <div
               key={index}
-              className="flex justify-between items-center pl-4 pr-5 py-[11px] hover:bg-[#F6F7F8] transition-all"
+              className="flex justify-between items-center pl-4 pr-5 py-[11px] text-dark hover:bg-[#F6F7F8] transition-all"
             >
-              <p className="text-wrap">{item}</p>
+              <p className="text-sm text-wrap ">{item}</p>
               <button
                 onClick={alert}
                 className="hover:scale-105 transition-all">
