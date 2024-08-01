@@ -28,6 +28,7 @@ export default function useChart() {
   const { patients, selectedPatient, selectedPatientIndex } =
     usePatientsContext();
 
+  // There is a little bit of gpt and Chart.js documentation in this section:
   const chartData = useMemo(() => {
     if (!selectedPatient) {
       return { data: null, options: null };

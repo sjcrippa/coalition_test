@@ -2,12 +2,12 @@
 
 import { Line } from "react-chartjs-2";
 
+import Cards from "./cards";
 import Systolic from "./systolic";
 import Diastolic from "./diastolic";
 import useChart from "@/hooks/useChart";
-import { LoadingSpinner } from "@/components/Loading/loading";
-import Cards from "./cards";
 import { useHandleResize } from "@/hooks/useHandleResize";
+import { LoadingSpinner } from "@/components/Loading/loading";
 
 export default function DiagnosisHistory() {
   const { data, options } = useChart();
@@ -21,13 +21,9 @@ export default function DiagnosisHistory() {
           <h3 className="pt-4 text-lg font-bold text-dark">Blood Pressure</h3>
           <div className="flex flex-col md:grid md:grid-cols-3">
             <div className="md:col-span-2">
-              {
-                !data || !options ? (
-                  <LoadingSpinner />
-                ) : (
-                  <Line data={data} options={options} />
-                )
-              }
+              {!data || !options ? (<LoadingSpinner />) : (
+                <Line data={data} options={options} />
+              )}
             </div>
             <div className="mt-5 flex md:gap-y-5 xl:gap-y-0 text-center md:text-left md:mt-0 md:flex md:flex-col md:-translate-y-6 md:col-span-1 mr-4">
               <Systolic />
@@ -42,5 +38,5 @@ export default function DiagnosisHistory() {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
