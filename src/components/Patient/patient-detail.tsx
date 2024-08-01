@@ -15,7 +15,7 @@ export default function PatientDetail() {
   const profilePictureSrc = selectedPatient?.profile_picture || "/defaultImage.png"; // --> This is needed because Next.js Image requires the src property to be of type string or StaticImport.
 
   return (
-    <section className="mt-8 mr-8 2xl:w-[367px] h-fit bg-white rounded-2xl shadow">
+    <section className="mt-8 ml-8 lg:ml-0 mr-8 2xl:w-[367px] h-fit bg-white rounded-2xl shadow">
       <div className="mt-8 mb-8 w-full items-center flex flex-col justify-center">
 
         {loading ? <LoadingSpinner /> : (
@@ -31,7 +31,7 @@ export default function PatientDetail() {
             <h4 className="mt-6 text-2xl font-extrabold text-dark">{selectedPatient?.name}</h4>
           </>
         )}
-        <div className="ml-5 mt-8 flex flex-col md:grid md:grid-cols-2 xl:flex xl:flex-col">
+        <div className="ml-5 mt-8 flex flex-col md:grid md:grid-cols-2 xl:flex xl:w-full xl:flex-col xl:items-start">
           <div className="flex gap-x-4 mb-8 ">
             <div className="flex justify-center items-center w-[42px] h-[42px] bg-light rounded-full">
               <Calendar />

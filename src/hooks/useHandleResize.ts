@@ -7,7 +7,7 @@ export const useHandleResize = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 960);
+      setIsMobile(window.innerWidth <= 1024);
     };
 
     handleResize();

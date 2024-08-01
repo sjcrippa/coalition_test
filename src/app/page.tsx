@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="flex flex-col justify-center items-center lg:items-start lg:flex lg:flex-row lg:justify-center">
       <SearchPatients />
-      <div className="flex flex-col">
+      <div className="flex flex-col w-full lg:w-auto">
         <DiagnosisHistory />
         <DiagnosisList />
       </div>

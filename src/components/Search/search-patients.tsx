@@ -12,8 +12,8 @@ export default function SearchPatients() {
   const { patients, loading, error, handleSelectPatient, selectedPatientIndex } = usePatientsContext();
 
   return (
-    <section className="mt-8 w-full xl:w-[367px] lg:ml-[18px] overflow-hidden">
-      <div className="mx-8 lg:mx-0 h-[500px] lg:h-[1054px] bg-white rounded-2xl shadow overflow-hidden">
+    <section className="mt-8 w-full xl:w-[367px] lg:ml-[18px] pb-2">
+      <div className="mx-8 lg:mx-0 h-[500px] lg:h-[1054px] bg-white rounded-2xl shadow overflow-hidden ">
         <div className="flex items-center w-full justify-between px-5 mb-10">
           <h1 className="mt-5 text-2xl font-extrabold text-dark">Patients</h1>
           <button

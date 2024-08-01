@@ -9,7 +9,7 @@ export default function Systolic() {
 
   return (
     <section className="h-[84px]">
-      <div className="flex flex-col">
+      <div className="flex flex-col items-center md:items-start">
         <div className="flex items-center gap-x-1">
           <div className="w-[14px] h-[14px] rounded-full border border-white bg-[#E66FD2]"></div>
           <h4 className="text-sm text-dark font-bold">Systolic</h4>

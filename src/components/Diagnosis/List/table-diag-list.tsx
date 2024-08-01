@@ -15,7 +15,7 @@ export default function TableDiagList() {
   const { selectedPatient } = usePatientsContext();
 
   return (
-    <section className="h-[350px] px-5 pb-[10px] overflow-y-hidden">
+    <section className="w-fit h-[350px] px-5 pb-[10px] overflow-y-hidden">
       <ScrollArea className="h-full">
         <Table>
           <TableHeader className="bg-light ">

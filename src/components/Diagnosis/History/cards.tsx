@@ -16,7 +16,7 @@ export default function Cards() {
   const diagnosisKeys: DiagnosisKey[] = ['respiratory_rate', 'temperature', 'heart_rate'];
 
   return (
-    <section className="flex space-x-[21px]">
+    <section className="flex flex-col items-center gap-y-5 md:flex md:flex-row md:space-x-[21px] pb-5">
       {diagnosisKeys.map((key) => (
         <div key={key} className={`w-[228px] h-[242px] pl-4 pt-4 ${cardStyles[key].backgroundColor} rounded-xl flex flex-col justify-start text-dark`}>
           <Image src={cardStyles[key].image} alt={key} className="mb-4" width={96} height={96} />
