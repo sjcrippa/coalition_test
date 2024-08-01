@@ -12,7 +12,7 @@ export default function Home() {
         <DiagnosisHistory />
         <DiagnosisList />
       </div>
-      <div className="flex flex-col">
+      <div className="flex flex-col w-full lg:w-auto">
         <PatientDetail />
         <LabResults />
       </div>

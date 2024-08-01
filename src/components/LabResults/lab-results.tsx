@@ -10,7 +10,7 @@ export default function LabResults() {
   const { selectedPatient } = usePatientsContext();
 
   return (
-    <section className="h-[296px] mx-8 mt-8 pb-[7px] bg-white rounded-2xl shadow overflow-y-hidden">
+    <section className="h-[296px] mr-8 mt-8 mb-8 pb-[7px] bg-white rounded-2xl shadow overflow-y-hidden">
       <h4 className="mt-5 ml-5 mb-4 text-2xl font-extrabold text-dark">Lab Results</h4>
       <ScrollArea className="h-full">
         <div className="pl-[22px] pr-5">

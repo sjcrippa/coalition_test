@@ -14,7 +14,7 @@ export default function DiagnosisHistory() {
   const { isMobile } = useHandleResize();
 
   return (
-    <section className="mx-28 md:mx-8 h-full md:h-[673px] bg-white rounded-2xl shadow mt-8">
+    <section className="mx-8 h-full md:h-[673px] bg-white rounded-2xl shadow mt-8">
       <h2 className="ml-5 mt-5 text-2xl font-extrabold text-dark">Diagnosis History</h2>
       <div className="h-[350px] md:h-[298px] mx-5 mt-10 pl-4 rounded-xl bg-[#F4F0FE]">
         <h3 className="pt-4 text-lg font-bold text-dark">Blood Pressure</h3>
